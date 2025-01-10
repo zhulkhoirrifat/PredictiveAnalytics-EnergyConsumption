@@ -54,18 +54,23 @@ Berdasarkan data tersebut variabel-variabel pada Energy Consumption Prediction D
 ### EDA - Univariate
 
 ![DayOfWeek Univariate](https://github.com/user-attachments/assets/44adae7c-3871-4184-a094-2214e7a6c0e0)
+
 Terdapat 7 kategori yang mempresentasikan hari pada fitur DayOfWeek, dari data tersebut bisa disimpulkan bahwa datanya hampir merata dengan yang tertinggi pada hari sabtu yaitu 14.8% dan hari senin yang paling kecil datanya dengan presentase 13.8 persen.
 
 ![Holiday Univariate](https://github.com/user-attachments/assets/158d3098-18aa-4a3b-a67d-c141aad322ee)
+
 Fitur holiday atau liburan memiliki sebaran data yang hampir seimbang, No memiliki presentase data sebesar 53.1% dan Yes memiliki presentase data sebesar 46.9%.
 
 ![HVACUsage Univariate](https://github.com/user-attachments/assets/983677e7-4958-4105-a073-a52a45d96f9e)
+
 Pada grafik diatas HVACUsage atau status sistem pendingin datanya seimbang memiliki masing masing 50% data.
 
 ![LightningUsage Univariate](https://github.com/user-attachments/assets/bdcaadd3-024b-455c-9636-f971e6007c2d)
+
 Fitur LightningUsage yaitu penggunaan lampu nyala atau tidak juga memiliki sebaran data yang hampir seimbang, Off memiliki presentase data sebesar 50.9% dan On memiliki presentase data sebesar 49.1%.
 
 ![hist univariate](https://github.com/user-attachments/assets/ef845a3d-ba40-4778-8188-32c67302f405)
+
 Dilihat dari histogram variabel 'EnergyConsumption', yang merupakan target fitur (label) pada data. Bisa diperoleh beberapa informasi yaitu:
 - Rentang penggunaan energi yaitu 53-100, menunjukkan konsumsi energi dalam batas wajar
 - Distribusi datanya adalah simetris, memiliki distribusi yang seimbang disekitar pusatnya.
@@ -82,9 +87,11 @@ Berdasarkan rata rata konsumsi energi terhadap fitur kategori memberikan beberap
 - Faktor-faktor tersebut tidak memiliki pengaruh yang signifikan terhadap rata-rata konsumsi energi.
 
 ![hist multi](https://github.com/user-attachments/assets/91cc54f6-702f-412e-a0ae-11298a25b5c5)
+
 Berdasarkan scatter plot, hanya Temperature saja yang terlihat berhubungan dengan EnergyConsumption secara visual. Hubungan lain seperti Humidity, SquareFootage, Hour, RenewableEnergy terlihat lemah.
 
 ![conf matrix](https://github.com/user-attachments/assets/96c82e17-4556-4e24-9450-292aa1054305)
+
 Jika diamati, fitur 'Temperature' satu satunya yang berkolerasi dengan 'EnergyConsumption' (bernilai 0.54). Karena sebagian fitur memiliki korelasi rendah dengan target model yang berbasis linear regression mungkin akan tidak optimal.
 
 
