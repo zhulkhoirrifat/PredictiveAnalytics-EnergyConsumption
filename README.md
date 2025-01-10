@@ -206,7 +206,8 @@ Tabel Train Test RMSE
 | Random Forest | 0.010006 | 0.156066 |
 | ADABoost | 0.057788 | 0.13968 |
 
-![Grafik MSE](https://github.com/user-attachments/assets/c43c995d-5533-4337-9949-cebdafd71ac4)
+![Grafik MSE](https://github.com/user-attachments/assets/1e7322fc-e2d2-4b41-80f8-9e73bed46df4)
+
 
 Tabel Prediksi
 | y_true | prediksi_KNN | prediksi_Random Forest | prediksi_ADABoost |
