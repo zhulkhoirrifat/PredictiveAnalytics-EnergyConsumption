@@ -63,21 +63,31 @@ Dengan karakteristik data ini, seluruh fitur dapat dioptimalkan untuk mengidenti
 
 ![DayOfWeek Univariate](https://github.com/user-attachments/assets/eb5f3e91-a051-4c71-b74b-01f92c210d56)
 
+Gambar (1)
+
 Terdapat 7 kategori yang mempresentasikan hari pada fitur DayOfWeek, dari data tersebut bisa disimpulkan bahwa datanya hampir merata dengan yang tertinggi pada hari sabtu yaitu 14.8% dan hari senin yang paling kecil datanya dengan presentase 13.8 persen.
 
 ![Holiday Univariate](https://github.com/user-attachments/assets/70bbb964-4ec1-4ecc-912f-d7da0af15015)
+
+Gambar (2)
 
 Fitur holiday atau liburan memiliki sebaran data yang hampir seimbang, No memiliki presentase data sebesar 53.1% dan Yes memiliki presentase data sebesar 46.9%.
 
 ![HVACUsage Univariate](https://github.com/user-attachments/assets/6bb5b301-7d56-483e-93e2-f6872c096f50)
 
+Gambar (3)
+
 Pada grafik diatas HVACUsage atau status sistem pendingin datanya seimbang memiliki masing masing 50% data.
 
 ![LightningUsage Univariate](https://github.com/user-attachments/assets/23493dcf-b2f2-4b10-afad-5e8f34cb8186)
 
+Gambar (4)
+
 Fitur LightningUsage yaitu penggunaan lampu nyala atau tidak juga memiliki sebaran data yang hampir seimbang, Off memiliki presentase data sebesar 50.9% dan On memiliki presentase data sebesar 49.1%.
 
 ![hist univariate](https://github.com/user-attachments/assets/4381f79f-418e-4ee5-8876-859b3c64e92d)
+
+Gambar (5)
 
 Dilihat dari histogram variabel 'EnergyConsumption', yang merupakan target fitur (label) pada data. Bisa diperoleh beberapa informasi yaitu:
 - Rentang penggunaan energi yaitu 53-100, menunjukkan konsumsi energi dalam batas wajar
@@ -86,9 +96,20 @@ Dilihat dari histogram variabel 'EnergyConsumption', yang merupakan target fitur
 ### EDA - Multivariate
 
 ![Day Multivariate](https://github.com/user-attachments/assets/7f292486-a5d9-40fe-b8bc-f2dff4c2160f)
+
+Gambar (6)
+
 ![holiday multi](https://github.com/user-attachments/assets/53fb4c1c-730b-466d-9ebd-c005b2a572ed)
+
+Gambar (7)
+
 ![hvac multi](https://github.com/user-attachments/assets/74df2b43-18ba-4863-8e63-6b76733e82c2)
+
+Gambar (8)
+
 ![lightning multi](https://github.com/user-attachments/assets/a93873f0-be93-4e20-bf92-d92276490b2b)
+
+Gambar (9)
 
 Berdasarkan rata rata konsumsi energi terhadap fitur kategori memberikan beberapa informasi, berikut analisisnya:
 - Rentang rata-rata yang sempit mengindikasikan bahwa konsumsi energi relatif stabil meskipun ada perubahan kategori pada variabel 'DayOfWeek', 'Holiday', 'HVACUsage', atau 'LightningUsage'.
@@ -96,9 +117,13 @@ Berdasarkan rata rata konsumsi energi terhadap fitur kategori memberikan beberap
 
 ![hist multi](https://github.com/user-attachments/assets/25bdfdff-6a1a-4c71-a2ee-748c4b3e8e91)
 
+Gambar (10)
+
 Berdasarkan scatter plot, hanya Temperature saja yang terlihat berhubungan dengan EnergyConsumption secara visual. Hubungan lain seperti Humidity, SquareFootage, Hour, RenewableEnergy terlihat lemah.
 
 ![conf matrix](https://github.com/user-attachments/assets/984142e4-bd86-40a9-83e0-b59bf3fa17e3)
+
+Gambar (11)
 
 Jika diamati, fitur 'Temperature' satu satunya yang berkolerasi dengan 'EnergyConsumption' (bernilai 0.54). Karena sebagian fitur memiliki korelasi rendah dengan target model yang berbasis linear regression mungkin akan tidak optimal.
 
@@ -194,13 +219,18 @@ Parameter learning rate yang dipilih adalah 0.05 dan random state 55
 ## Evaluation
 
 Metode evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE), yang menghitung rata-rata selisih kuadrat antara nilai aktual dan nilai prediksi. MSE digunakan karena mampu memberikan gambaran kuantitatif tentang seberapa baik model memprediksi target variabel. Rumus MSE adalah:
+
 ![Rumus MSE](https://github.com/user-attachments/assets/2109c780-e604-4cd1-9101-f1c6fa85cb90)
+
+Gambar (12)
 
 Semakin kecil nilai MSE, semakin baik performa model dalam membuat prediksi.
 
+**Hasil Evaluasi**
+
 Berdasarkan hasil evaluasi menggunakan MSE dapat disimpulkan bahwa model Boosting memiliki MSE yang kecil dibandingkan dengan model lainnya
 
-Tabel Evaluasi RMSE
+Tabel (1)
 | Model | Train | Test |
 | ---- | ---- | ---- |
 | KNN | 0.047223 | 0.206707 |
@@ -211,21 +241,24 @@ Tabel Evaluasi RMSE
 - Random Forest menunjukkan performa yang cukup baik pada data uji, namun sedikit lebih buruk dibandingkan Boosting (ADABoost).
 - K-Nearest Neighbor (KNN) memiliki performa yang kurang memuaskan karena RMSE pada data uji jauh lebih tinggi dibandingkan model lainnya, yang menunjukkan kurang optimalnya model ini dalam menangkap pola data.
 
+**Visualisasi Perbandingan**
+
 ![Grafik Perbandingan](https://github.com/user-attachments/assets/c9b3ce38-15f0-4c74-a42f-4f6bfa50f9bc)
 
 Grafik berikut menunjukkan perbandingan nilai MSE untuk setiap model.
 
-Tabel Prediksi
+**Prediksi Model**
 
 Berikut adalah tabel perbandingan nilai aktual (y_true) dan prediksi dari masing-masing model 
 
+Tabel (2)
 | y_true | prediksi_KNN | prediksi_Random Forest | prediksi_ADABoost |
 | ---- | ---- | ---- | ---- |
 | 84.778571	 | 64.3 | 67.4 | 69.1 |
 
 Berdasarkan tabel prediksi, model Boosting memberikan hasil prediksi yang lebih mendekati nilai aktual dibandingkan model KNN dan Random Forest, mendukung hasil evaluasi MSE.
 
-Dampak terhadap Business Understanding
+**Dampak terhadap Business Understanding**
 
 1. Apakah model sudah menjawab problem statement?
    - Berdasarkan hasil analisis temperature, HVACUsage, dan SquareFootage menunjukkan pengaruh yang signifikan terhadap konsumsi energi.
@@ -238,6 +271,6 @@ Dampak terhadap Business Understanding
    - Model prediksi: Model ADABoost memberikan prediksi yang akurat dan andal. Dengan prediksi ini, pemangku kepentingan dapat mengantisipasi kebutuhan energi berdasarkan aktivitas dan kondisi tertentu, sehingga meminimalkan pemborosan energi.
    - Metrik MSE: Penggunaan MSE sebagai metrik evaluasi memberikan ukuran kuantitatif yang jelas untuk membandingkan performa model dan memastikan solusi yang diberikan efektif.
   
-Kesimpulan
+**Kesimpulan**
 
 Model ADABoost telah menjawab problem statement dengan baik dan berhasil mencapai goals yang diharapkan. Solusi ini memberikan dampak positif bagi pengelolaan energi di bangunan, mendukung keputusan yang berbasis data, dan meningkatkan efisiensi operasional secara signifikan.
