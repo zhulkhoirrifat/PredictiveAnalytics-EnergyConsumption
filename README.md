@@ -56,8 +56,9 @@ Dataset dapat diunduh melalui tautan berikut: [energy-consumption-prediction.csv
 
 ### Kondisi Data
 - Jumlah Data: Dataset terdiri dari 5000 baris dan 12 kolom.
-- Kondisi: Data telah bersih, tanpa missing value, duplikasi, atau outlier, sehingga siap digunakan untuk analisis lebih lanjut.
-Dengan karakteristik data ini, seluruh fitur dapat dioptimalkan untuk mengidentifikasi pola konsumsi energi serta meningkatkan akurasi prediksi menggunakan model machine learning.
+- Missing Value: Tidak ditemukan nilai yang hilang (missing values) pada dataset ini. Semua fitur terisi penuh (data yang bernilai 0 bukan null digunakan didalam beberapa kolom).
+- Duplikat Data: Tidak terdapat data duplikat setelah dilakukan pengecekan dengan metode .duplicated().
+- Outlier: Tidak ditemukan outlier yang signifikan pada fitur numerik berdasarkan analisis boxplot. Data bersih dan siap untuk analisis lebih lanjut.
 
 ### EDA - Univariate
 
