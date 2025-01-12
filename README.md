@@ -226,6 +226,7 @@ Berikut adalah tabel perbandingan nilai aktual (y_true) dan prediksi dari masing
 Berdasarkan tabel prediksi, model Boosting memberikan hasil prediksi yang lebih mendekati nilai aktual dibandingkan model KNN dan Random Forest, mendukung hasil evaluasi MSE.
 
 Dampak terhadap Business Understanding
+
 1. Apakah model sudah menjawab problem statement?
    - Berdasarkan hasil analisis temperature, HVACUsage, dan SquareFootage menunjukkan pengaruh yang signifikan terhadap konsumsi energi.
    - Model yang dikembangkan, terutama Boosting, memberikan prediksi konsumsi energi yang akurat dengan nilai RMSE terkecil pada data uji (0.139680). Prediksi ini membantu pemangku kepentingan untuk merencanakan kebutuhan energi di berbagai kondisi, seperti jadwal aktivitas, cuaca tertentu, atau penggunaan fasilitas bangunan.
@@ -238,4 +239,5 @@ Dampak terhadap Business Understanding
    - Metrik MSE: Penggunaan MSE sebagai metrik evaluasi memberikan ukuran kuantitatif yang jelas untuk membandingkan performa model dan memastikan solusi yang diberikan efektif.
   
 Kesimpulan
+
 Model ADABoost telah menjawab problem statement dengan baik dan berhasil mencapai goals yang diharapkan. Solusi ini memberikan dampak positif bagi pengelolaan energi di bangunan, mendukung keputusan yang berbasis data, dan meningkatkan efisiensi operasional secara signifikan.
