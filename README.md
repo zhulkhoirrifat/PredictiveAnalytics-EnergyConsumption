@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Istia Budi
+# Laporan Proyek Machine Learning - Zhulkhoir Rifat
 
 ## Domain Proyek
 
